@@ -1,5 +1,5 @@
 # Base16 Builder
-Build color variations of Base16 with YAML scheme definitions and ERB templates. 
+Easily build color variations of Base16 with YAML scheme definitions and ERB templates. 
 
 ## Usage
     > base16
@@ -13,6 +13,7 @@ Build only the "default" theme
 * Vim
 * TextMate
 * iTerm 2
+* Mou
 
 ## Contributors
-* [ChrisKempson](https://github.com/chriskempson) - HTML Preview, Vim, TextMate, iTerm2
+* [ChrisKempson](https://github.com/chriskempson) - HTML Preview, Vim, TextMate, iTerm2, Mou
