@@ -80,29 +80,24 @@ class Theme
 
   def parse_template_files(scheme_data)
 
-    # Set ERB vars
+    # Define ERB vars
     scheme = scheme_data["scheme"]
     author = scheme_data["author"]
-    base00 = scheme_data["base00"]
-    base01 = scheme_data["base01"]
-    base02 = scheme_data["base02"]
-    base03 = scheme_data["base03"]
-    base04 = scheme_data["base04"]
-    base05 = scheme_data["base05"]
-    base06 = scheme_data["base06"]
-    base07 = scheme_data["base07"]
-    base08 = scheme_data["base08"]
-    base09 = scheme_data["base09"]
-    base0A = scheme_data["base0A"]
-    base0B = scheme_data["base0B"]
-    base0C = scheme_data["base0C"]
-    base0D = scheme_data["base0D"]
-    base0E = scheme_data["base0E"]
-    base0F = scheme_data["base0F"]
+    base = {}
     
-    templates_files = read_template_dir
+    [
+      "00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "0A", "0B", 
+      "0C", "0D", "0E", "0F"
+    ].each do |key|
+      hex = scheme_data["base" + key];
+      base[key] = {
+        "hex" => hex,
+        "rgb" => to_rgb(hex),
+        "rgb_float" => to_rgb_float(hex)
+      }
+    end
 
-    templates_files.each do |template_file|
+    read_template_dir.each do |template_file|
       puts "  - " + template_file
       template_contents = read_template_file(template_file)
       parsed = ERB.new(template_contents)
@@ -113,6 +108,14 @@ class Theme
       output_file.write parsed.result(binding)
     end
 
+  end
+  
+  def to_rgb(hex)
+    hex.scan(/../).map {|color| color.to_i(16)}
+  end
+  
+  def to_rgb_float(hex)
+    hex.scan(/../).map {|color| color.to_i(16).to_f / 255 }
   end
   
   def read_error_message(file)
