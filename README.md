@@ -9,9 +9,10 @@ Build all schemes
 Build only the "default" theme
 
 ## Templates
+* HTML Preview
 * Vim
 * TextMate
-* HTML Preview
+* iTerm 2
 
 ## Contributors
-* [ChrisKempson](https://github.com/chriskempson) - Vim, TextMate, HTML Preview
+* [ChrisKempson](https://github.com/chriskempson) - HTML Preview, Vim, TextMate, iTerm2
