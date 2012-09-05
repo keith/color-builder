@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 # Base16 Builder (https://github.com/chriskempson/base16-builder)
 
+require "securerandom"
 require "yaml"
 require "erb"
 
@@ -83,6 +84,7 @@ class Theme
     # Define ERB vars
     scheme = scheme_data["scheme"]
     author = scheme_data["author"]
+    uuid = SecureRandom.uuid
     base = {}
     
     [
@@ -93,7 +95,7 @@ class Theme
       base[key] = {
         "hex" => hex,
         "rgb" => to_rgb(hex),
-        "rgb_float" => to_rgb_float(hex)
+        "srgb" => to_srgb(hex)
       }
     end
 
@@ -114,7 +116,7 @@ class Theme
     hex.scan(/../).map {|color| color.to_i(16)}
   end
   
-  def to_rgb_float(hex)
+  def to_srgb(hex)
     hex.scan(/../).map {|color| color.to_i(16).to_f / 255 }
   end
   
