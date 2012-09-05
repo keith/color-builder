@@ -1,0 +1,139 @@
+#!/usr/bin/env ruby
+# Base16 Builder (https://github.com/chriskempson/base16-builder)
+
+require "yaml"
+require "erb"
+
+class Theme
+
+  def initialize
+    @scheme_dir = "schemes"
+    @template_dir = "templates"
+    @output_dir = "output"
+  end
+
+  def build(scheme_file)
+    
+    if scheme_file then 
+      build_single_scheme(scheme_file)
+    else 
+      build_all_schemes
+    end
+    
+  end
+  
+  def build_all_schemes
+    scheme_files = read_scheme_dir
+
+    scheme_files.each do |scheme_file|
+      build_single_scheme(scheme_file)
+    end
+  end
+  
+  def build_single_scheme(scheme_file)
+    puts scheme_file
+    scheme_data = read_scheme_file(scheme_file)
+    parse_template_files(scheme_data)
+  end
+
+  def read_scheme_file(scheme_file)
+    scheme_file = @scheme_dir + "/#{scheme_file}" 
+
+    begin
+      YAML.load_file(scheme_file)
+    rescue StandardError
+       abort(read_error_message(scheme_file))
+    end
+  end
+  
+  def read_scheme_dir
+    Dir.chdir(@scheme_dir) do
+      
+      begin
+        Dir.glob("*.yml")
+      rescue StandardError
+        abort(read_error_message(scheme_dir))
+      end
+    end
+  end
+
+  def read_template_dir
+    Dir.chdir(@template_dir) do
+      
+      begin
+        Dir.glob("*.erb")
+      rescue StandardError
+        abort(read_error_message(@template_dir))
+      end
+    end
+  end
+
+  def read_template_file(template_file)
+    template_file = @template_dir + "/#{template_file}" 
+     
+    begin
+      File.open(template_file).read
+    rescue StandardError
+       abort(read_error_message(template_file))
+    end
+  end
+
+  def parse_template_files(scheme_data)
+
+    # Set ERB vars
+    scheme = scheme_data["scheme"]
+    author = scheme_data["author"]
+    base00 = scheme_data["base00"]
+    base01 = scheme_data["base01"]
+    base02 = scheme_data["base02"]
+    base03 = scheme_data["base03"]
+    base04 = scheme_data["base04"]
+    base05 = scheme_data["base05"]
+    base06 = scheme_data["base06"]
+    base07 = scheme_data["base07"]
+    base08 = scheme_data["base08"]
+    base09 = scheme_data["base09"]
+    base0A = scheme_data["base0A"]
+    base0B = scheme_data["base0B"]
+    base0C = scheme_data["base0C"]
+    base0D = scheme_data["base0D"]
+    base0E = scheme_data["base0E"]
+    base0F = scheme_data["base0F"]
+    
+    templates_files = read_template_dir
+
+    templates_files.each do |template_file|
+      puts "  - " + template_file
+      template_contents = read_template_file(template_file)
+      parsed = ERB.new(template_contents)
+      
+      extension = File.basename(template_file, ".erb");
+      filename = scheme.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
+      output_file = File.open("#{@output_dir}/base16.#{filename}.#{extension}", "w") 
+      output_file.write parsed.result(binding)
+    end
+
+  end
+  
+  def read_error_message(file)
+    "Error reading #{file}"
+  end
+
+end
+
+help_message = <<-EOF
+Base16 Builder v0.1
+https://github.com/chriskempson/base16-builder
+
+usage: base16               build all schemes
+   or: base16 scheme.yml    build specified scheme
+EOF
+
+case ARGV[0]
+  when "--help"
+      puts help_message
+  when "-h"
+      puts help_message
+  else
+    Theme.new.build(ARGV[0])
+end
