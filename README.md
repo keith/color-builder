@@ -16,6 +16,8 @@ Build only the "default" theme
 * XFCE4 Terminal 
 * Mou
 * Escape Code Shell Script
+* Rouge
 
 ## Contributors
 * [ChrisKempson](https://github.com/chriskempson) - HTML Preview, Vim, TextMate, iTerm3, XFCE4 Terminal, Mou, Escape Code Shell Script
+* [Jay Adkisson](https://github.com/jayferd) - Rouge
