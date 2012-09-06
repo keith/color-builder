@@ -19,5 +19,5 @@ Build only the "default" theme
 * Rouge
 
 ## Contributors
-* [ChrisKempson](https://github.com/chriskempson) - HTML Preview, Vim, TextMate, iTerm3, XFCE4 Terminal, Mou, Escape Code Shell Script
-* [Jay Adkisson](https://github.com/jayferd) - Rouge
+* [chriskempson](https://github.com/chriskempson) - HTML Preview, Vim, TextMate, iTerm3, XFCE4 Terminal, Mou, Escape Code Shell Script
+* [jayferd](https://github.com/jayferd) - Rouge
