@@ -6,6 +6,8 @@ require "yaml"
 require "erb"
 
 class Theme
+  
+  attr_accessor :template
 
   def initialize
     @scheme_dir = "schemes"
@@ -62,7 +64,7 @@ class Theme
     Dir.chdir(@template_dir) do
       
       begin
-        Dir.glob("*.erb")
+        Dir.glob("**/*.erb")
       rescue StandardError
         abort(read_error_message(@template_dir))
       end
@@ -84,6 +86,7 @@ class Theme
     # Define ERB vars
     scheme = scheme_data["scheme"]
     author = scheme_data["author"]
+    slug = slug(scheme_data["scheme"])
     uuid = SecureRandom.uuid
     base = {}
     
@@ -101,15 +104,34 @@ class Theme
 
     read_template_dir.each do |template_file|
       puts "  - " + template_file
+      
       template_contents = read_template_file(template_file)
       parsed = ERB.new(template_contents)
+
+      dir_name = File.dirname(template_file);
+      file_name = File.basename(template_file, ".erb");
+      scheme_name = slug(scheme)
+
+      make_dir("#{@output_dir}/#{dir_name}")
       
-      extension = File.basename(template_file, ".erb");
-      filename = scheme.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
-      output_file = File.open("#{@output_dir}/base16.#{filename}.#{extension}", "w") 
+      output_file = File.open(
+        "#{@output_dir}/#{dir_name}/base16-#{scheme_name}.#{file_name}",
+        "w"
+      ) 
       output_file.write parsed.result(binding)
     end
 
+  end
+  
+  def make_dir(name)
+    if FileTest::directory?(name) 
+      return
+    end
+    Dir::mkdir(name)
+  end
+  
+  def slug(string)
+    string.downcase.strip.gsub(' ', '.').gsub(/[^\w-]/, '')
   end
   
   def to_rgb(hex)
