@@ -20,5 +20,5 @@ Build only the "default" theme
 * Gnome Terminal
 
 ## Contributors
-* [chriskempson](https://github.com/chriskempson) - HTML Preview, Vim, TextMate, iTerm3, XFCE4 Terminal, Mou, Escape Code Shell Script, Gnome Terminal
+* [chriskempson](https://github.com/chriskempson) - HTML Preview, Vim, TextMate, iTerm 2, XFCE4 Terminal, Mou, Escape Code Shell Script, Gnome Terminal
 * [jayferd](https://github.com/jayferd) - Rouge
