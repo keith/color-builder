@@ -1,23 +1,16 @@
 <%
 # Emacs Template
-# Chris Kempson (http://chriskempson.com)
+# Neil Bhakta
 %>
 
 ;; Base16 <%= scheme %> (https://github.com/chriskempson/base16)
 ;; Scheme: <%= author %>
 
-;;; <%=scheme %>-theme.el --- custom theme for faces
-
-;;; Commentary:
-;;
-;; Originally by Chris Kempson https://github.com/ChrisKempson/Tomorrow-Theme
-;; Ported to GNU Emacs by Chris Charles
-;; Ported to GNU Emacs 24's built-in theme system by Jim Myhrberg (@jimeh)
+;;; base16-<%= slug %>-theme.el
 
 ;;; Code:
 
-
-(deftheme <%=scheme %>)
+(deftheme base16-<%= slug %>)
 
 (let ((background "#<%= base["01"]["hex"] %>")
       (current-line "#<%= base["03"]["hex"] %>")
@@ -33,8 +26,8 @@
       (blue "#<%= base["0D"]["hex"] %>")
       (purple "#<%= base["0E"]["hex"] %>"))
 
-  (custom-theme-set-faces
-   '<%=scheme %>
+  (custom-theme-set-faces 
+   'base16-<%= slug %>
 
    ;; Built-in stuff (Emacs 23)
    `(default ((t (:background ,background :foreground ,foreground))))
@@ -83,7 +76,7 @@
    `(rainbow-delimiters-depth-9-face ((t (:foreground ,foreground)))))
 
   (custom-theme-set-variables
-   '<%=scheme %>
+   'base16-<%= slug %>
 
    `(ansi-color-names-vector
      ;; black, red, green, yellow, blue, magenta, cyan, white
@@ -92,6 +85,6 @@
      ;; black, red, green, yellow, blue, magenta, cyan, white
      [unspecified ,background ,red ,green ,yellow ,blue ,purple ,blue ,foreground])))
 
-(provide-theme '<%=scheme %>)
+(provide-theme 'base16-<%= slug %>)
 
-;;; <%=scheme %>-theme.el ends here
+;;; base16-<%= slug %>-theme.el ends here
