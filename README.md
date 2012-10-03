@@ -22,3 +22,6 @@ Build only the "default" theme
 ## Contributors
 * [chriskempson](https://github.com/chriskempson) - HTML Preview, Vim, TextMate, iTerm 2, XFCE4 Terminal, Mou, Escape Code Shell Script, Gnome Terminal
 * [jayferd](https://github.com/jayferd) - Rouge
+
+## License
+Base16 Builder is released under the [MIT License](https://github.com/chriskempson/base16-builder/blob/master/LICENSE.md)
