@@ -18,10 +18,12 @@ Build only the "default" theme
 * Escape Code Shell Script
 * Rouge
 * Gnome Terminal
+* Emacs
 
 ## Contributors
 * [chriskempson](https://github.com/chriskempson) - HTML Preview, Vim, TextMate, iTerm 2, XFCE4 Terminal, Mou, Escape Code Shell Script, Gnome Terminal
 * [jayferd](https://github.com/jayferd) - Rouge
+* [neil477](https://github.com/neil477) - Emacs
 
 ## License
 Base16 Builder is released under the [MIT License](https://github.com/chriskempson/base16-builder/blob/master/LICENSE.md)
