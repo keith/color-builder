@@ -2,26 +2,26 @@
 # Vim Template
 # Chris Kempson (http://chriskempson.com)
 
-%>" Base16 <%= scheme %> (https://github.com/chriskempson/base16)
-" Scheme: <%= author %>
+%>" Base16 <%= @scheme %> (https://github.com/chriskempson/base16)
+" Scheme: <%= @author %>
 
 " GUI Base16 Color Definitions
-let s:gui00 = "<%= base["00"]["hex"] %>"
-let s:gui01 = "<%= base["01"]["hex"] %>"
-let s:gui02 = "<%= base["02"]["hex"] %>"
-let s:gui03 = "<%= base["03"]["hex"] %>"
-let s:gui04 = "<%= base["04"]["hex"] %>"
-let s:gui05 = "<%= base["05"]["hex"] %>"
-let s:gui06 = "<%= base["06"]["hex"] %>"
-let s:gui07 = "<%= base["07"]["hex"] %>"
-let s:gui08 = "<%= base["08"]["hex"] %>"
-let s:gui09 = "<%= base["09"]["hex"] %>"
-let s:gui0A = "<%= base["0A"]["hex"] %>"
-let s:gui0B = "<%= base["0B"]["hex"] %>"
-let s:gui0C = "<%= base["0C"]["hex"] %>"
-let s:gui0D = "<%= base["0D"]["hex"] %>"
-let s:gui0E = "<%= base["0E"]["hex"] %>"
-let s:gui0F = "<%= base["0F"]["hex"] %>"
+let s:gui00 = "<%= @base["00"]["hex"] %>"
+let s:gui01 = "<%= @base["01"]["hex"] %>"
+let s:gui02 = "<%= @base["02"]["hex"] %>"
+let s:gui03 = "<%= @base["03"]["hex"] %>"
+let s:gui04 = "<%= @base["04"]["hex"] %>"
+let s:gui05 = "<%= @base["05"]["hex"] %>"
+let s:gui06 = "<%= @base["06"]["hex"] %>"
+let s:gui07 = "<%= @base["07"]["hex"] %>"
+let s:gui08 = "<%= @base["08"]["hex"] %>"
+let s:gui09 = "<%= @base["09"]["hex"] %>"
+let s:gui0A = "<%= @base["0A"]["hex"] %>"
+let s:gui0B = "<%= @base["0B"]["hex"] %>"
+let s:gui0C = "<%= @base["0C"]["hex"] %>"
+let s:gui0D = "<%= @base["0D"]["hex"] %>"
+let s:gui0E = "<%= @base["0E"]["hex"] %>"
+let s:gui0F = "<%= @base["0F"]["hex"] %>"
 
 " Terminal Base16 Color Definitions
 let s:cterm00 = "00"
@@ -53,7 +53,7 @@ endif
 " Theme Setup
 hi clear
 syntax reset
-let g:colors_name = "base16-<%= slug %>"
+let g:colors_name = "base16-<%= @slug %>"
 
 " Highlighting function
 fun! <SID>hi(group, guifg, guibg, ctermfg, ctermbg, attr)
@@ -100,7 +100,7 @@ call <SID>hi("WarningMsg",    s:gui08, "", s:cterm08, "", "")
 call <SID>hi("WildMenu",      s:gui08, "", s:cterm08, "", "")
 
 if &background == "dark"
-  call <SID>hi("Cursor",        s:gui00, s:gui05, s:cterm00, s:gui05, "")
+  call <SID>hi("Cursor",        s:gui00, s:gui05, s:cterm00, s:cterm05, "")
   call <SID>hi("NonText",       s:gui03, "", s:cterm03, "", "")
   call <SID>hi("Normal",        s:gui05, s:gui00, s:cterm05, s:cterm00, "")
   call <SID>hi("LineNr",        s:gui03, s:gui01, s:cterm03, s:cterm01, "")

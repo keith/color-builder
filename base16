@@ -36,7 +36,8 @@ class Theme
   def build_single_scheme(scheme_file)
     puts scheme_file
     scheme_data = read_scheme_file(scheme_file)
-    parse_template_files(scheme_data)
+    populate_template_variables(scheme_data)
+    create_output_files
   end
 
   def read_scheme_file(scheme_file)
@@ -80,53 +81,67 @@ class Theme
        abort(read_error_message(template_file))
     end
   end
-
-  def parse_template_files(scheme_data)
-
+  
+  def populate_template_variables(scheme_data)
     # Define ERB vars
-    scheme = scheme_data["scheme"]
-    author = scheme_data["author"]
-    slug = slug(scheme_data["scheme"])
-    uuid = SecureRandom.uuid
-    base = {}
+    @scheme = scheme_data["scheme"]
+    @author = scheme_data["author"]
+    @slug = slug(scheme_data["scheme"])
     
+    # Define ERB color vars
+    @base = {}
     [
       "00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "0A", "0B", 
       "0C", "0D", "0E", "0F"
     ].each do |key|
       hex = scheme_data["base" + key];
-      base[key] = {
+      @base[key] = {
         "hex" => hex,
         "dhex" => to_dhex(hex),
         "rgb" => to_rgb(hex),
         "srgb" => to_srgb(hex)
       }
     end
-
+  end
+  
+  def create_output_files
+    # Read each 
     read_template_dir.each do |template_file|
-      puts "  - " + template_file
+      puts "  - " + template_file # Show which file we are parsing
       
-      template_contents = read_template_file(template_file)
-      parsed = ERB.new(template_contents)
+      # Grab the results of the parsed ERB file
+      contents = parse_template_file(template_file)
 
-      dir_name = File.dirname(template_file);
-      file_name = File.basename(template_file, ".erb");
-      scheme_name = slug(scheme)
-
-      make_dir("#{@output_dir}/#{dir_name}")
-
-      #Emacs themes require -theme to appended to end of filename
-      if dir_name=="emacs"
-        scheme_name << "-theme"
-      end
-
-      output_file = File.open(
-        "#{@output_dir}/#{dir_name}/base16-#{scheme_name}.#{file_name}",
-        "w"
-      ) 
-      output_file.write parsed.result(binding)
+      write_output_file(template_file, contents)
     end
+  end
+  
+  def parse_template_file(template_file)
+    # Define ERB vars
+    @uuid = SecureRandom.uuid
+    
+    template_contents = read_template_file(template_file)
+    parsed = ERB.new(template_contents)
+    
+    return parsed.result(binding)
+  end
+  
+  def write_output_file(template_file, contents)
+    dir_name = File.dirname(template_file);
+    file_name = File.basename(template_file, ".erb");
+    scheme_name = slug(@scheme)
 
+    make_dir("#{@output_dir}/#{dir_name}")
+    
+    # If the filename starts with a dash, we use the dash to separate
+    delimiter = file_name.starts_with?("-") ? "" : "."
+
+    output_file = File.open(
+      "#{@output_dir}/#{dir_name}/base16-#{scheme_name}#{delimiter}#{file_name}",
+      "w"
+    ) 
+    
+    output_file.write(contents)
   end
   
   def make_dir(name)
@@ -152,10 +167,22 @@ class Theme
     hex.scan(/../).map {|color| color.to_i(16).to_f / 255 }
   end
   
+  def split_by_slash(hex)
+    hex.scan(/.{1,2}/).join('/')
+  end
+  
   def read_error_message(file)
     "Error reading #{file}"
   end
 
+end
+
+# Provide starts_with? method borrowed from Rails
+class String
+  def starts_with?(prefix)
+    prefix = prefix.to_s
+    self[0, prefix.length] == prefix
+  end
 end
 
 help_message = <<-EOF
