@@ -1,6 +1,7 @@
 # Base16 Builder
 Easily build color variations of Base16 with YAML scheme definitions and ERB templates.  
-See the [Base16](https://github.com/chriskempson/base16) repository for more information.
+See the [Base16](https://github.com/chriskempson/base16) repository for more information.  
+Requires Ruby 1.9 or greater.
 
 ## Usage
     > ./base16
