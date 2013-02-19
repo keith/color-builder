@@ -1,0 +1,113 @@
+# Geany Base16 Template
+# Rob Loach (http://robloach.net)
+#
+# Copyright (c) 2013 Rob Loach
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
+[theme_info]
+name=Base16 <%= @scheme %> Dark
+description=Base16 provides carefully chosen syntax highlighting and a default set of sixteen colors suitable for a wide range of applications.
+version=0.1
+author=Rob Loach (http://robloach.net)
+url=http://github.com/chriskempson/base16
+
+[named_styles]
+default=#<%= @base["07"]["hex"] %>;#<%= @base["01"]["hex"] %>;false;false
+error=#<%= @base["08"]["hex"] %>
+
+# Editor Styles
+# =============
+selection=#<%= @base["04"]["hex"] %>;#<%= @base["03"]["hex"] %>;false;true
+current_line=;#<%= @base["02"]["hex"] %>;true;false
+brace_good=#<%= @base["0B"]["hex"] %>;;true;false
+brace_bad=#<%= @base["08"]["hex"] %>;;true;false
+margin_line_number=#<%= @base["07"]["hex"] %>;#<%= @base["02"]["hex"] %>;false;false
+margin_folding=#<%= @base["07"]["hex"] %>;;false;false
+fold_symbol_highlight=#<%= @base["01"]["hex"] %>
+indent_guide=#<%= @base["02"]["hex"] %>;;false;false
+caret=#<%= @base["05"]["hex"] %>;;false;false
+marker_line=#<%= @base["07"]["hex"] %>;#ff0;false;false
+marker_search=#<%= @base["07"]["hex"] %>;#b8f4b8;false;false
+marker_mark=#<%= @base["07"]["hex"] %>;#b8f4b8;
+call_tips=#<%= @base["04"]["hex"] %>;;false;false
+white_space=;;true
+
+# Programming languages
+# =====================
+comment=#<%= @base["04"]["hex"] %>
+comment_doc=comment
+comment_line=comment
+comment_line_doc=comment_doc
+comment_doc_keyword=comment_doc,bold
+comment_doc_keyword_error=comment_doc,italic
+number=#<%= @base["0B"]["hex"] %>;;false;false
+number_1=number
+number_2=number_1
+type=#<%= @base["0B"]["hex"] %>;;true
+class=type
+function=default
+parameter=function
+
+keyword=#<%= @base["0E"]["hex"] %>;;true;false
+keyword_1=keyword
+keyword_2=#<%= @base["0B"]["hex"] %>;;false;true
+keyword_3=keyword_1
+keyword_4=keyword_1
+
+#identifier=#fff;#1e1e1e;false;false
+identifier=#<%= @base["07"]["hex"] %>;;false;false
+identifier_1=identifier
+identifier_2=identifier_1
+identifier_3=identifier_1
+identifier_4=identifier_1
+
+string=#<%= @base["0B"]["hex"] %>;;true;false
+string_1=string
+string_2=#<%= @base["0A"]["hex"] %>;;false;true
+string_3=default
+string_4=default
+string_eol=string_1,italic
+
+character=string_1
+backtick=string_2
+here_doc=string_2
+scalar=string_2
+label=default,bold
+preprocessor=#<%= @base["08"]["hex"] %>;;false;false
+regex=number_1
+operator=#<%= @base["06"]["hex"] %>;;true;false
+decorator=#<%= @base["0A"]["hex"] %>;;false;false
+other=#<%= @base["07"]["hex"] %>
+
+# Markup-type languages
+# =====================
+tag=#<%= @base["0E"]["hex"] %>;;false;false
+tag_unknown=#<%= @base["07"]["hex"] %>;#<%= @base["08"]["hex"] %>;true;false
+tag_end=#<%= @base["0D"]["hex"] %>;;true;false
+attribute=#<%= @base["0E"]["hex"] %>;;false;false
+attribute_unknown=#<%= @base["07"]["hex"] %>;#<%= @base["08"]["hex"] %>;false;false
+value=#<%= @base["0D"]["hex"] %>
+entity=#<%= @base["0A"]["hex"] %>
+
+# Diff
+# ====
+line_added=#<%= @base["0B"]["hex"] %>
+line_removed=#<%= @base["08"]["hex"] %>
+line_changed=#<%= @base["0D"]["hex"] %>
