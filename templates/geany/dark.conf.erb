@@ -57,51 +57,58 @@ comment_line=comment
 comment_line_doc=comment_doc
 comment_doc_keyword=comment_doc,bold
 comment_doc_keyword_error=comment_doc,italic
-number=#<%= @base["0B"]["hex"] %>;;false;false
-number_1=number
-number_2=number_1
-type=#<%= @base["0B"]["hex"] %>;;true
-class=type
-function=default
-parameter=function
+number=#<%= @base["0B"]["hex"] %>
+number_1=#<%= @base["09"]["hex"] %>
+number_2=#<%= @base["09"]["hex"] %>
+type=#<%= @base["0A"]["hex"] %>;;false
+# Person.rb = Person
+class=#<%= @base["0A"]["hex"] %>;;true
+# Person.rb = initialize
+# PHP
+function=#<%= @base["0D"]["hex"] %>;;true;false
+parameter=#<%= @base["06"]["hex"] %>
 
-keyword=#<%= @base["0E"]["hex"] %>;;true;false
-keyword_1=keyword
-keyword_2=#<%= @base["0B"]["hex"] %>;;false;true
-keyword_3=keyword_1
-keyword_4=keyword_1
+keyword=#<%= @base["0F"]["hex"] %>;;true;false
+# Person.rb = class, include, def, end, etc
+# PHP = include_once(), if elseif else
+keyword_1=#<%= @base["0E"]["hex"] %>;;true;false
+keyword_2=#<%= @base["0C"]["hex"] %>;;false;true
+keyword_3=#<%= @base["0F"]["hex"] %>;;false;true
+keyword_4=#<%= @base["09"]["hex"] %>;;false;true
 
-#identifier=#fff;#1e1e1e;false;false
-identifier=#<%= @base["07"]["hex"] %>;;false;false
-identifier_1=identifier
-identifier_2=identifier_1
-identifier_3=identifier_1
-identifier_4=identifier_1
+identifier=#<%= @base["0C"]["hex"] %>;;true;false
+# Person.rb = ActiveModel::Conversion
+identifier_1=#<%= @base["0A"]["hex"] %>;;true;false
+identifier_2=#<%= @base["0C"]["hex"] %>;;true;false
+identifier_3=#<%= @base["0D"]["hex"] %>;;true;false
+identifier_4=#<%= @base["0E"]["hex"] %>;;true;false
 
-string=#<%= @base["0B"]["hex"] %>;;true;false
-string_1=string
-string_2=#<%= @base["0A"]["hex"] %>;;false;true
-string_3=default
-string_4=default
-string_eol=string_1,italic
+string=#<%= @base["09"]["hex"] %>
+string_1=#<%= @base["0B"]["hex"] %>
+string_2=#<%= @base["0A"]["hex"] %>
+string_3=#<%= @base["0C"]["hex"] %>
+string_4=#<%= @base["0D"]["hex"] %>
+string_eol=#<%= @base["0E"]["hex"] %>;;false;true
 
 character=string_1
-backtick=string_2
-here_doc=string_2
-scalar=string_2
-label=default,bold
-preprocessor=#<%= @base["08"]["hex"] %>;;false;false
+backtick=#<%= @base["0A"]["hex"] %>
+here_doc=#<%= @base["0A"]["hex"] %>
+scalar=#<%= @base["0A"]["hex"] %>
+label=#<%= @base["07"]["hex"] %>;;true;false
+# Person.rb = :name
+# PHP = $_GET
+preprocessor=#<%= @base["0B"]["hex"] %>
 regex=number_1
-operator=#<%= @base["06"]["hex"] %>;;true;false
-decorator=#<%= @base["0A"]["hex"] %>;;false;false
-other=#<%= @base["07"]["hex"] %>
+operator=#<%= @base["05"]["hex"] %>;;true;false
+decorator=#<%= @base["0D"]["hex"] %>;;false;false
+other=#<%= @base["08"]["hex"] %>
 
 # Markup-type languages
 # =====================
-tag=#<%= @base["0E"]["hex"] %>;;false;false
+tag=#<%= @base["0A"]["hex"] %>;;false;false
 tag_unknown=#<%= @base["07"]["hex"] %>;#<%= @base["08"]["hex"] %>;true;false
 tag_end=#<%= @base["0D"]["hex"] %>;;true;false
-attribute=#<%= @base["0E"]["hex"] %>;;false;false
+attribute=#<%= @base["09"]["hex"] %>;;false;false
 attribute_unknown=#<%= @base["07"]["hex"] %>;#<%= @base["08"]["hex"] %>;false;false
 value=#<%= @base["0D"]["hex"] %>
 entity=#<%= @base["0A"]["hex"] %>
