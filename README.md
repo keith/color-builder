@@ -13,7 +13,7 @@ Build only the "default" theme
 ## Templates
 * HTML Preview
 * Vim
-* TextMate
+* TextMate (Sublime Text)
 * iTerm 2
 * XFCE4 Terminal 
 * Mou
@@ -22,9 +22,10 @@ Build only the "default" theme
 * Gnome Terminal
 * Emacs
 * Xcode 4
+* BBEdit (TextWrangler) 
 
 ## Contributors
-* [chriskempson](https://github.com/chriskempson) - HTML Preview, Vim, TextMate, iTerm 2, XFCE4 Terminal, Mou, Escape Code Shell Script, Gnome Terminal
+* [chriskempson](https://github.com/chriskempson) - HTML Preview, Vim, TextMate, iTerm 2, XFCE4 Terminal, Mou, Escape Code Shell Script, Gnome Terminal, BBEdit
 * [jayferd](https://github.com/jayferd) - Rouge
 * [neil477](https://github.com/neil477) - Emacs
 * [joedynamite](https://github.com/joedynamite) - Xcode 4
