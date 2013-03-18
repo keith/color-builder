@@ -29,6 +29,7 @@ Build only the "default" theme
 * [jayferd](https://github.com/jayferd) - Rouge
 * [neil477](https://github.com/neil477) - Emacs
 * [joedynamite](https://github.com/joedynamite) - Xcode 4
+* [robloach](https://github.com/robloach) - Geany
 
 ## License
 Base16 Builder is released under the [MIT License](https://github.com/chriskempson/base16-builder/blob/master/LICENSE.md)
