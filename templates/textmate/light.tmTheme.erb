@@ -127,7 +127,7 @@
 			<key>name</key>
 			<string>Functions</string>
 			<key>scope</key>
-			<string>entity.name.function, meta.function-call, meta.require</string>
+			<string>entity.name.function, meta.require, support.function.any-method</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
@@ -413,10 +413,8 @@
 			<string>markup.inserted</string>
 			<key>settings</key>
 			<dict>
-				<key>background</key>
-				<string>#<%= @base["0B"]["hex"] %></string>
 				<key>foreground</key>
-				<string>#<%= @base["07"]["hex"] %></string>
+				<string>#<%= @base["0B"]["hex"] %></string>
 			</dict>
 		</dict>
 		<dict>
@@ -426,15 +424,24 @@
 			<string>markup.deleted</string>
 			<key>settings</key>
 			<dict>
-				<key>background</key>
-				<string>#<%= @base["08"]["hex"] %></string>
 				<key>foreground</key>
-				<string>#<%= @base["07"]["hex"] %></string>
+				<string>#<%= @base["08"]["hex"] %></string>
 			</dict>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>Colours</string>
+			<string>Changed</string>
+			<key>scope</key>
+			<string>markup.changed</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#<%= @base["0E"]["hex"] %></string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Colors</string>
 			<key>scope</key>
 			<string>constant.other.color</string>
 			<key>settings</key>
@@ -478,54 +485,13 @@
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>diff.deleted</string>
-			<key>scope</key>
-			<string>markup.deleted</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#<%= @base["08"]["hex"] %></string>
-				<key>background</key>
-				<string>#<%= @base["07"]["hex"] %></string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>diff.inserted</string>
-			<key>scope</key>
-			<string>markup.inserted</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#<%= @base["0B"]["hex"] %></string>
-				<key>background</key>
-				<string>#<%= @base["07"]["hex"] %></string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>diff.changed</string>
-			<key>scope</key>
-			<string>markup.changed</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#<%= @base["0E"]["hex"] %></string>
-				<key>background</key>
-				<string>#<%= @base["07"]["hex"] %></string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Invalid - illegal</string>
+			<string>Invalid</string>
 			<key>scope</key>
 			<string>invalid.illegal</string>
 			<key>settings</key>
 			<dict>
 				<key>background</key>
 				<string>#<%= @base["08"]["hex"] %></string>
-				<key>fontStyle</key>
-				<string>bold</string>
 				<key>foreground</key>
 				<string>#<%= @base["07"]["hex"] %></string>
 			</dict>
