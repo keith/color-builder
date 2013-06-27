@@ -24,7 +24,9 @@ Build only the "default" theme
 * Xcode 4
 * BBEdit (TextWrangler)
 * Windows Command Prompt
-* MinTTY 
+* MinTTY
+* Notepad++
+* Gedit
 
 ## Contributors
 * [chriskempson](https://github.com/chriskempson) - HTML Preview, Vim, TextMate, iTerm 2, XFCE4 Terminal, Mou, Escape Code Shell Script, Gnome Terminal, BBEdit
