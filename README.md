@@ -11,20 +11,21 @@ Build all schemes
 Build only the "default" theme
 
 ## Templates
-* HTML Preview
-* Vim
-* TextMate (Sublime Text)
-* iTerm 2
-* XFCE4 Terminal 
-* Mou
-* Escape Code Shell Script
-* Rouge
-* Gnome Terminal
-* Emacs
-* Xcode 4
+* Chrome DevTools
 * BBEdit (TextWrangler)
-* Windows Command Prompt
+* Emacs
+* Escape Code Shell Script
+* Gnome Terminal
+* HTML Preview
+* iTerm 2
 * MinTTY 
+* Mou
+* Rouge
+* TextMate (Sublime Text)
+* Vim
+* Windows Command Prompt
+* Xcode 4
+* XFCE4 Terminal 
 
 ## Contributors
 * [chriskempson](https://github.com/chriskempson) - HTML Preview, Vim, TextMate, iTerm 2, XFCE4 Terminal, Mou, Escape Code Shell Script, Gnome Terminal, BBEdit
@@ -33,7 +34,7 @@ Build only the "default" theme
 * [joedynamite](https://github.com/joedynamite) - Xcode 4
 * [robloach](https://github.com/robloach) - Geany
 * [geoffstokes](https://github.com/geoffstokes) - Windows Command Prompt, MinTTY
-* [idleberg](https://github.com/idleberg) - Gedit, Notepad++
+* [idleberg](https://github.com/idleberg) - Chrome DevTools, Gedit, Notepad++
 
 ## License
 Base16 Builder is released under the [MIT License](https://github.com/chriskempson/base16-builder/blob/master/LICENSE.md)
