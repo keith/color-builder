@@ -24,8 +24,14 @@ Build only the "default" theme
 * TextMate (Sublime Text)
 * Vim
 * Windows Command Prompt
+<<<<<<< HEAD
 * Xcode 4
 * XFCE4 Terminal 
+=======
+* MinTTY
+* Notepad++
+* Gedit
+>>>>>>> 54cc8798c2949c10825ab1228b040a85c714aeb8
 
 ## Contributors
 * [chriskempson](https://github.com/chriskempson) - HTML Preview, Vim, TextMate, iTerm 2, XFCE4 Terminal, Mou, Escape Code Shell Script, Gnome Terminal, BBEdit
