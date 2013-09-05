@@ -1,6 +1,8 @@
 <%
 # HTML Preview Template
 # Chris Kempson (http://chriskempson.com)
+
+@ratio = 50
   
 %><html>
   <head>
@@ -51,25 +53,25 @@
       .base0F { color: #<%= @base["0F"]["hex"] %>; }
 
       .background { background-color: #<%= @base['00']['hex'] %>; }
-      .background-intense { background-color: #<%= tint(@base["00"]["rgb"]).map{|x| x.to_s(16)}.join('') %>; }
+      .background-intense { background-color: #<%= tint(@base["00"]["rgb"], @ratio).map{|x| x.to_s(16)}.join('') %>; }
       .foreground { background-color: #<%= @base['05']['hex'] %>; }
-      .foreground-intense { background-color: #<%= tint(@base["05"]["rgb"]).map{|x| x.to_s(16)}.join('') %>; }
+      .foreground-intense { background-color: #<%= tint(@base["05"]["rgb"], @ratio).map{|x| x.to_s(16)}.join('') %>; }
       .color0 { background-color: #<%= @base['00']['hex'] %>; }
-      .color0-intense { background-color: #<%= tint(@base["00"]["rgb"]).map{|x| x.to_s(16)}.join('') %>; }
+      .color0-intense { background-color: #<%= tint(@base["00"]["rgb"], @ratio).map{|x| x.to_s(16)}.join('') %>; }
       .color1 { background-color: #<%= @base['08']['hex'] %>; }
-      .color1-intense { background-color: #<%= tint(@base["08"]["rgb"]).map{|x| x.to_s(16)}.join('') %>; }
+      .color1-intense { background-color: #<%= tint(@base["08"]["rgb"], @ratio).map{|x| x.to_s(16)}.join('') %>; }
       .color2 { background-color: #<%= @base['0B']['hex'] %>; }
-      .color2-intense { background-color: #<%= tint(@base["0B"]["rgb"]).map{|x| x.to_s(16)}.join('') %>; }
+      .color2-intense { background-color: #<%= tint(@base["0B"]["rgb"], @ratio).map{|x| x.to_s(16)}.join('') %>; }
       .color3 { background-color: #<%= @base['0A']['hex'] %>; }
-      .color3-intense { background-color: #<%= tint(@base["0A"]["rgb"]).map{|x| x.to_s(16)}.join('') %>; }
+      .color3-intense { background-color: #<%= tint(@base["0A"]["rgb"], @ratio).map{|x| x.to_s(16)}.join('') %>; }
       .color4 { background-color: #<%= @base['0D']['hex'] %>; }
-      .color4-intense { background-color: #<%= tint(@base["0D"]["rgb"]).map{|x| x.to_s(16)}.join('') %>; }
+      .color4-intense { background-color: #<%= tint(@base["0D"]["rgb"], @ratio).map{|x| x.to_s(16)}.join('') %>; }
       .color5 { background-color: #<%= @base['0E']['hex'] %>; }
-      .color5-intense { background-color: #<%= tint(@base["0E"]["rgb"]).map{|x| x.to_s(16)}.join('') %>; }
+      .color5-intense { background-color: #<%= tint(@base["0E"]["rgb"], @ratio).map{|x| x.to_s(16)}.join('') %>; }
       .color6 { background-color: #<%= @base['0C']['hex'] %>; }
-      .color6-intense { background-color: #<%= tint(@base["0C"]["rgb"]).map{|x| x.to_s(16)}.join('') %>; }
+      .color6-intense { background-color: #<%= tint(@base["0C"]["rgb"], @ratio).map{|x| x.to_s(16)}.join('') %>; }
       .color7 { background-color: #<%= @base['05']['hex'] %>; }
-      .color7-intense { background-color: #<%= tint(@base["05"]["rgb"]).map{|x| x.to_s(16)}.join('') %>; }
+      .color7-intense { background-color: #<%= tint(@base["05"]["rgb"], @ratio).map{|x| x.to_s(16)}.join('') %>; }
     </style>
   </head>
   <body>
