@@ -212,7 +212,7 @@ class Theme
   # @param color [Array] The RGB triplet of the color to be modified.
   # @param weight [Fixnum] The color weight. See #mix for more information.
   def tint(color, weight = 50)
-    mix(color, @base['07']['rgb'], weight)
+    mix(@base['07']['rgb'], color, weight)
   end
 
   # Add a bit of 'black' to a color. White is defined by color 0, the end of the
@@ -221,7 +221,7 @@ class Theme
   # @param color [Array] The RGB triplet of the color to be modified.
   # @param weight [Fixnum] The color weight. See #mix for more information.
   def shade(color, weight = 50)
-    mix(color, @base['00']['rgb'], weight)
+    mix(@base['00']['rgb'], color, weight)
   end
 end
 
