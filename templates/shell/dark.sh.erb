@@ -32,6 +32,9 @@ if [ -n "$TMUX" ]; then
   # tell tmux to pass the escape sequences through
   # (Source: http://permalink.gmane.org/gmane.comp.terminal-emulators.tmux.user/1324)
   printf_template="\033Ptmux;\033\033]4;%d;rgb:%s\007\033\\"
+elif [ "${TERM%%-*}" = "screen" ]; then
+  # GNU screen (screen, screen-256color, screen-256color-bce)
+  printf_template="\033P\033]4;%d;rgb:%s\007\033\\"
 else
   printf_template="\033]4;%d;rgb:%s\033\\"
 fi
