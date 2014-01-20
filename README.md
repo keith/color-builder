@@ -10,6 +10,9 @@ Build all schemes
     > ./base16 default.yml
 Build only the "default" theme
 
+    > ./base16 https://awesome-schemes.com/my-scheme.yml
+Build a scheme stored on some webspace.
+
 ## Templates
 * BBEdit (TextWrangler)
 * Chrome DevTools
@@ -21,6 +24,7 @@ Build only the "default" theme
 * highlight.js
 * HTML Preview
 * iTerm 2
+* Mate Terminal
 * MinTTY
 * Mou
 * Notepad++
@@ -31,6 +35,7 @@ Build only the "default" theme
 * Windows Command Prompt
 * Xcode 4
 * XFCE4 Terminal
+* Zathura
 
 ## Contributors
 * [chriskempson](https://github.com/chriskempson) - HTML Preview, Vim, TextMate, iTerm 2, XFCE4 Terminal, Mou, Escape Code Shell Script, Gnome Terminal, BBEdit
@@ -41,6 +46,8 @@ Build only the "default" theme
 * [geoffstokes](https://github.com/geoffstokes) - Windows Command Prompt, MinTTY
 * [idleberg](https://github.com/idleberg) - Chrome DevTools, CodeMirror, Gedit, highlight.js, Notepad++
 * [rgieseke](https://github.com/rgieseke) - Textadept
+* [oxplot](https://github.com/oxplot) - Mate Terminal
+* [esn89](https://github.com/esn89) - Zathura PDF Reader
 
 ## License
 Base16 Builder is released under the [MIT License](https://github.com/chriskempson/base16-builder/blob/master/LICENSE.md)
