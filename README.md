@@ -14,6 +14,7 @@ Build only the "default" theme
 Build a scheme stored on some webspace.
 
 ## Templates
+* Atom
 * BBEdit (TextWrangler)
 * Chrome DevTools
 * CodeMirror
@@ -47,7 +48,7 @@ Build a scheme stored on some webspace.
 * [joedynamite](https://github.com/joedynamite) - Xcode 4
 * [robloach](https://github.com/robloach) - Geany
 * [geoffstokes](https://github.com/geoffstokes) - Windows Command Prompt, MinTTY
-* [idleberg](https://github.com/idleberg) - Chrome DevTools, CodeMirror, Gedit, highlight.js, Notepad++, prettify.js, Pygments, Rainbow
+* [idleberg](https://github.com/idleberg) - Atom, Chrome DevTools, CodeMirror, Gedit, highlight.js, Notepad++, prettify.js, Pygments, Rainbow
 * [rgieseke](https://github.com/rgieseke) - Textadept
 * [oxplot](https://github.com/oxplot) - Mate Terminal
 * [esn89](https://github.com/esn89) - Zathura PDF Reader
