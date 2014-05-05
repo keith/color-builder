@@ -29,6 +29,7 @@ Build a scheme stored on some webspace.
 * Mate Terminal
 * MinTTY
 * Mou
+* MultiMarkdown Composer 2
 * Notepad++
 * prettify.js
 * Pygments
@@ -53,6 +54,7 @@ Build a scheme stored on some webspace.
 * [rgieseke](https://github.com/rgieseke) - Textadept
 * [oxplot](https://github.com/oxplot) - Mate Terminal
 * [esn89](https://github.com/esn89) - Zathura PDF Reader
+* [romainx](https://github.com/romainx) - MultiMarkdown Composer 2
 
 ## License
 Base16 Builder is released under the [MIT License](https://github.com/chriskempson/base16-builder/blob/master/LICENSE.md)
