@@ -21,6 +21,7 @@ Build a scheme stored on some webspace.
 * Escape Code Shell Script
 * Gedit
 * Gnome Terminal
+* Guake
 * highlight.js
 * HTML Preview
 * iTerm 2
