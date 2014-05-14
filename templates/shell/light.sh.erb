@@ -7,7 +7,7 @@
 
 if [ "${TERM%%-*}" = 'linux' ]; then
     # This script doesn't support linux console (use 'vconsole' template instead)
-    exit
+    return 2>/dev/null || exit 0
 fi
 
 color00="<%= split_by_slash(@base["00"]["hex"]) %>" # Base 00 - Black
