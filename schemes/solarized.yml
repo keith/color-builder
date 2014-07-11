@@ -1,7 +1,7 @@
 scheme: "Solarized"
 author: "Ethan Schoonover (http://ethanschoonover.com/solarized)"
 base0:  "#fdf6e3"
-base00:  "#99cc99"
+base00:  "#cccccc"
 base01:  "#999999"
 base02:  "#393939"
 base03:  "#2a2a2a"
