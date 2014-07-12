@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-# Base16 Builder (https://github.com/chriskempson/base16-builder)
+# Color Builder (https://github.com/Keithbsmiley/color-builder)
 
 require "securerandom"
 require "yaml"
@@ -240,11 +240,11 @@ class String
 end
 
 help_message = <<-EOF
-Base16 Builder v0.1
-https://github.com/chriskempson/base16-builder
+Color Builder v0.1
+https://github.com/Keithbsmiley/color-builder
 
-usage: base16               build all schemes
-   or: base16 scheme.yml    build specified scheme
+usage: build               build all schemes
+   or: build scheme.yml    build specified scheme
 EOF
 
 case ARGV[0]
