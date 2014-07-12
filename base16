@@ -81,6 +81,9 @@ class Theme
       "violet", "yellow"
     ].each do |key|
       hex = scheme_data[key]
+      if hex.start_with?('#')
+        abort("Scheme file's colors must not start with a '#'")
+      end
 
       @colors[key] = {
         "hex" => hex,
