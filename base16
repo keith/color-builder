@@ -74,18 +74,15 @@ class Theme
     @slug = slug(scheme_data["scheme"])
 
     # Define ERB color vars
-    @base = {}
+    @colors = {}
     [
-      "0", "00", "01", "02", "03", "03", "1", "2", "3", "blue", "cyan",
-      "green", "magenta", "orange", "red", "violet", "yellow"
+      "base0", "base00", "base01", "base02", "base03", "base03", "base1",
+      "base2", "base3", "blue", "cyan", "green", "magenta", "orange", "red",
+      "violet", "yellow"
     ].each do |key|
-      if key.length < 3
-        hex = scheme_data["base" + key]
-      else
-        hex = scheme_data[key]
-      end
+      hex = scheme_data[key]
 
-      @base[key] = {
+      @colors[key] = {
         "hex" => hex,
         "hexbgr" => to_hex_bgr(hex),
         "dhex" => to_dhex(hex),
@@ -218,7 +215,7 @@ class Theme
   # @param color [Array] The RGB triplet of the color to be modified.
   # @param weight [Fixnum] The color weight. See #mix for more information.
   def tint(color, weight = 50)
-    mix(@base['07']['rgb'], color, weight)
+    mix(@colors['07']['rgb'], color, weight)
   end
 
   # Add a bit of 'black' to a color. White is defined by color 0, the end of the
@@ -227,7 +224,7 @@ class Theme
   # @param color [Array] The RGB triplet of the color to be modified.
   # @param weight [Fixnum] The color weight. See #mix for more information.
   def shade(color, weight = 50)
-    mix(@base['00']['rgb'], color, weight)
+    mix(@colors['00']['rgb'], color, weight)
   end
 end
 
