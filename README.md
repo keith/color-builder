@@ -14,3 +14,8 @@ Build a scheme stored on some webspace.
 ## Templates
 * iTerm 2
 * Vim
+
+---
+
+This is entirely copied from
+[base16-builder](https://github.com/chriskempson/base16-builder)
