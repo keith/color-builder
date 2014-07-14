@@ -12,8 +12,9 @@ Build only the "default" theme
 Build a scheme stored on some webspace.
 
 ## Templates
-* iTerm 2
-* Vim
+- iTerm 2
+- Vim
+- Xcode
 
 ---
 
