@@ -1,6 +1,9 @@
 # Color Builder
 Easily build color variations of Solarized with YAML scheme definitions and ERB templates.
 
+I'm currently using this to generate
+[parsec](https://github.com/Keithbsmiley/parsec)
+
 ## Usage
     > ./build
 Build all schemes
