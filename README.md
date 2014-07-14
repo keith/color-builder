@@ -2,17 +2,21 @@
 Easily build color variations of Solarized with YAML scheme definitions and ERB templates.
 
 I'm currently using this to generate
-[parsec](https://github.com/Keithbsmiley/parsec)
+[parsec](https://github.com/Keithbsmiley/parsec). You could create your
+own
+[scheme](https://github.com/Keithbsmiley/color-builder/blob/master/schemes/parsec.yml)
+though.
 
 ## Usage
-    > ./build
+    $ ./build
 Build all schemes
 
-    > ./build default.yml
+    $ ./build default.yml
 Build only the "default" theme
 
-    > ./build https://awesome-schemes.com/my-scheme.yml
-Build a scheme stored on some webspace.
+    $ ./build https://awesome-schemes.com/my-scheme.yml
+Build a scheme from a URL (note, these are not the same as base16
+schemes)
 
 ## Templates
 - iTerm 2
