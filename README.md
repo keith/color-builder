@@ -22,4 +22,5 @@ Build a scheme stored on some webspace.
 ---
 
 This is entirely copied from
-[base16-builder](https://github.com/chriskempson/base16-builder)
+[base16-builder](https://github.com/chriskempson/base16-builder) and
+[solarized](https://github.com/altercation/solarized)
