@@ -1,0 +1,18 @@
+scheme:    "panic"
+author:    "Keith Smiley (http://keith.so)"
+base03:    "1F2F43"
+base02:    "0563a7"
+base01:    "FF0000" # bullshit
+base00:    "FF0000" # bullshit
+base0:     "F4F6F1"
+base1:     "FF0000" # bullshit
+base2:     "FF0000" # bullshit
+base3:     "fdcb62"
+blue:      "60cbe7"
+cyan:      "44e745"
+green:     "9175db"
+magenta:   "FF0000" # bullshit
+orange:    "8d9da4"
+red:       "f5a54e"
+violet:    "ffa254"
+yellow:    "cd9c32"
