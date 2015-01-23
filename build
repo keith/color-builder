@@ -88,7 +88,8 @@ class Theme
         "hexbgr" => to_hex_bgr(hex),
         "dhex" => to_dhex(hex),
         "rgb" => to_rgb(hex),
-        "srgb" => to_srgb(hex)
+        "srgb" => to_srgb(hex),
+        "xcode" => xcode(hex)
       }
     end
   end
@@ -158,6 +159,10 @@ class Theme
 
   def to_srgb(hex)
     hex.scan(/../).map {|color| color.to_i(16).to_f / 255 }
+  end
+
+  def xcode(hex)
+    [to_srgb(hex).map { |x| x.round(6) }, 1].flatten.join(' ')
   end
 
   def split_by_slash(hex)
