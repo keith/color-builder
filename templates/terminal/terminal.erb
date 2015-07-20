@@ -1,0 +1,110 @@
+<%
+# Terminal.app Template
+# Petr Hosek (http://petrhosek.name)
+bplist = "bplist00\xD4\x01\x02\x03\x04\x05\x06\x15\x16X$versionX$objectsY$archiverT$top\x12\x00\x01\x86\xA0\xA3\a\b\x0FU$null\xD3\t\n\v\f\r\x0EUNSRGB\\NSColorSpaceV$classO\x10'%.10f %.10f %.10f\x00\x10\x01\x80\x02\xD2\x10\x11\x12\x13Z$classnameX$classesWNSColor\xA2\x12\x14XNSObject_\x10\x0FNSKeyedArchiver\xD1\x17\x18Troot\x80\x01\b\x11\x1A#-27;AHN[b\x8C\x8E\x90\x95\xA0\xA9\xB1\xB4\xBD\xCF\xD2\xD7\x00\x00\x00\x00\x00\x00\x01\x01\x00\x00\x00\x00\x00\x00\x00\x19\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xD9"
+%><?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ANSIBlackColor</key>
+	<data>
+	<%= Base64.encode64(sprintf(bplist, @colors["base02"]["srgb"][0], @colors["base02"]["srgb"][1], @colors["base02"]["srgb"][2])).gsub("\n", "\n\t").strip %>
+	</data>
+	<key>ANSIBlueColor</key>
+	<data>
+	<%= Base64.encode64(sprintf(bplist, @colors["blue"]["srgb"][0], @colors["blue"]["srgb"][1], @colors["blue"]["srgb"][2])).gsub("\n", "\n\t").strip %>
+	</data>
+	<key>ANSIBrightBlackColor</key>
+	<data>
+	<%= Base64.encode64(sprintf(bplist, @colors["base03"]["srgb"][0], @colors["base03"]["srgb"][1], @colors["base03"]["srgb"][2])).gsub("\n", "\n\t").strip %>
+	</data>
+	<key>ANSIBrightBlueColor</key>
+	<data>
+	<%= Base64.encode64(sprintf(bplist, @colors["base0"]["srgb"][0], @colors["base0"]["srgb"][1], @colors["base0"]["srgb"][2])).gsub("\n", "\n\t").strip %>
+	</data>
+	<key>ANSIBrightCyanColor</key>
+	<data>
+	<%= Base64.encode64(sprintf(bplist, @colors["base1"]["srgb"][0], @colors["base1"]["srgb"][1], @colors["base1"]["srgb"][2])).gsub("\n", "\n\t").strip %>
+	</data>
+	<key>ANSIBrightGreenColor</key>
+	<data>
+	<%= Base64.encode64(sprintf(bplist, @colors["base01"]["srgb"][0], @colors["base01"]["srgb"][1], @colors["base01"]["srgb"][2])).gsub("\n", "\n\t").strip %>
+	</data>
+	<key>ANSIBrightMagentaColor</key>
+	<data>
+	<%= Base64.encode64(sprintf(bplist, @colors["violet"]["srgb"][0], @colors["violet"]["srgb"][1], @colors["violet"]["srgb"][2])).gsub("\n", "\n\t").strip %>
+	</data>
+	<key>ANSIBrightRedColor</key>
+	<data>
+	<%= Base64.encode64(sprintf(bplist, @colors["orange"]["srgb"][0], @colors["orange"]["srgb"][1], @colors["orange"]["srgb"][2])).gsub("\n", "\n\t").strip %>
+	</data>
+	<key>ANSIBrightWhiteColor</key>
+	<data>
+	<%= Base64.encode64(sprintf(bplist, @colors["base3"]["srgb"][0], @colors["base3"]["srgb"][1], @colors["base3"]["srgb"][2])).gsub("\n", "\n\t").strip %>
+	</data>
+	<key>ANSIBrightYellowColor</key>
+	<data>
+	<%= Base64.encode64(sprintf(bplist, @colors["base02"]["srgb"][0], @colors["base02"]["srgb"][1], @colors["base02"]["srgb"][2])).gsub("\n", "\n\t").strip %>
+	</data>
+	<key>ANSICyanColor</key>
+	<data>
+	<%= Base64.encode64(sprintf(bplist, @colors["cyan"]["srgb"][0], @colors["cyan"]["srgb"][1], @colors["cyan"]["srgb"][2])).gsub("\n", "\n\t").strip %>
+	</data>
+	<key>ANSIGreenColor</key>
+	<data>
+	<%= Base64.encode64(sprintf(bplist, @colors["green"]["srgb"][0], @colors["green"]["srgb"][1], @colors["green"]["srgb"][2])).gsub("\n", "\n\t").strip %>
+	</data>
+	<key>ANSIMagentaColor</key>
+	<data>
+	<%= Base64.encode64(sprintf(bplist, @colors["magenta"]["srgb"][0], @colors["magenta"]["srgb"][1], @colors["magenta"]["srgb"][2])).gsub("\n", "\n\t").strip %>
+	</data>
+	<key>ANSIRedColor</key>
+	<data>
+	<%= Base64.encode64(sprintf(bplist, @colors["red"]["srgb"][0], @colors["red"]["srgb"][1], @colors["red"]["srgb"][2])).gsub("\n", "\n\t").strip %>
+	</data>
+	<key>ANSIWhiteColor</key>
+	<data>
+	<%= Base64.encode64(sprintf(bplist, @colors["base2"]["srgb"][0], @colors["base2"]["srgb"][1], @colors["base2"]["srgb"][2])).gsub("\n", "\n\t").strip %>
+	</data>
+	<key>ANSIYellowColor</key>
+	<data>
+	<%= Base64.encode64(sprintf(bplist, @colors["yellow"]["srgb"][0], @colors["yellow"]["srgb"][1], @colors["yellow"]["srgb"][2])).gsub("\n", "\n\t").strip %>
+	</data>
+	<key>BackgroundColor</key>
+	<data>
+	<%= Base64.encode64(sprintf(bplist, @colors["base03"]["srgb"][0], @colors["base03"]["srgb"][1], @colors["base03"]["srgb"][2])).gsub("\n", "\n\t").strip %>
+	</data>
+	<key>CursorColor</key>
+	<data>
+	<%= Base64.encode64(sprintf(bplist, @colors["base2"]["srgb"][0], @colors["base2"]["srgb"][1], @colors["base2"]["srgb"][2])).gsub("\n", "\n\t").strip %>
+	</data>
+	<key>FontAntialias</key>
+	<true/>
+	<key>FontWidthSpacing</key>
+	<real>0.99596774193548387</real>
+	<key>Linewrap</key>
+	<true/>
+	<key>ProfileCurrentVersion</key>
+	<real>2.02</real>
+	<key>SelectionColor</key>
+	<data>
+	<%= Base64.encode64(sprintf(bplist, @colors["base03"]["srgb"][0], @colors["base03"]["srgb"][1], @colors["base03"]["srgb"][2])).gsub("\n", "\n\t").strip %>
+	</data>
+	<key>TextBoldColor</key>
+	<data>
+	<%= Base64.encode64(sprintf(bplist, @colors["base2"]["srgb"][0], @colors["base2"]["srgb"][1], @colors["base2"]["srgb"][2])).gsub("\n", "\n\t").strip %>
+	</data>
+	<key>TextColor</key>
+	<data>
+	<%= Base64.encode64(sprintf(bplist, @colors["base2"]["srgb"][0], @colors["base2"]["srgb"][1], @colors["base2"]["srgb"][2])).gsub("\n", "\n\t").strip %>
+	</data>
+	<key>UseBrightBold</key>
+	<false/>
+	<key>name</key>
+	<string>Base 16 <%= @scheme %></string>
+	<key>shellExitAction</key>
+	<integer>1</integer>
+	<key>type</key>
+	<string>Window Settings</string>
+</dict>
+</plist>
