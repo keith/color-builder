@@ -90,6 +90,8 @@ bplist = "bplist00\xD4\x01\x02\x03\x04\x05\x06\x15\x16X$versionX$objectsY$archiv
 	<data>
 	<%= Base64.encode64(sprintf(bplist, @colors["base02"]["srgb"][0], @colors["base02"]["srgb"][1], @colors["base02"]["srgb"][2])).gsub("\n", "\n\t").strip %>
 	</data>
+	<key>ShowDimensionsInTitle</key>
+	<false/>
 	<key>TextBoldColor</key>
 	<data>
 	<%= Base64.encode64(sprintf(bplist, @colors["base1"]["srgb"][0], @colors["base1"]["srgb"][1], @colors["base1"]["srgb"][2])).gsub("\n", "\n\t").strip %>
@@ -98,13 +100,21 @@ bplist = "bplist00\xD4\x01\x02\x03\x04\x05\x06\x15\x16X$versionX$objectsY$archiv
 	<data>
 	<%= Base64.encode64(sprintf(bplist, @colors["base0"]["srgb"][0], @colors["base0"]["srgb"][1], @colors["base0"]["srgb"][2])).gsub("\n", "\n\t").strip %>
 	</data>
+	<key>UseBoldFonts</key>
+	<false/>
 	<key>UseBrightBold</key>
 	<false/>
+	<key>VisualBell</key>
+	<false/>
+	<key>WindowTitle</key>
+	<string></string>
 	<key>name</key>
 	<string><%= @scheme %></string>
 	<key>shellExitAction</key>
 	<integer>1</integer>
 	<key>type</key>
 	<string>Window Settings</string>
+	<key>useOptionAsMetaKey</key>
+	<true/>
 </dict>
 </plist>
